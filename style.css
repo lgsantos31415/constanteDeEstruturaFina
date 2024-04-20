@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gabarito";
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+h1 {
+  font-size: 52px;
+}
+p {
+  font-size: 32px;
+  transform: translateX(50%);
+}
+#constante {
+  width: 840px;
+  overflow: hidden;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+#top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#fracao {
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+}
+#numerador {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+#piano {
+  position: relative;
+}
+#flat {
+  display: flex;
+}
+.note-flat {
+  height: 250px;
+  border: 2px solid black;
+}
+#sharp {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 30px;
+}
+#sharp > :nth-child(3),
+#sharp > :nth-child(6),
+#sharp > :nth-child(8) {
+  margin-left: 60px;
+}
+.note-sharp {
+  height: 150px;
+  background: black;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  color: white;
+}
+.note-flat,
+.note-sharp {
+  user-select: none;
+  width: 60px;
+  border-radius: 0px 0px 8px 8px;
+  cursor: pointer;
+  transition: all 150ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+.active {
+  transform: translateY(2%);
+}
+i {
+  font-size: 38px;
+  cursor: pointer;
+}
+.invisible {
+  display: none;
+}
+
+@keyframes moverEsquerda {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-350%);
+  }
+}
+
+.moverEsquerda {
+  animation: moverEsquerda 113s linear;
+}
+
+.pausa {
+  animation-play-state: paused;
+}
+#flat-num,
+#sharp-num {
+  font-weight: bolder;
+}
+#buttons {
+  display: flex;
+  user-select: none;
+}
