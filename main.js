@@ -126,14 +126,12 @@ function pauseTimer() {
 restart.onclick = restartTimer;
 
 function restartTimer() {
-  xy = 0;
-  started = false;
-  restart.classList.add("invisible");
-  pauseTimer();
-  p.classList.remove("moverEsquerda");
-  p.classList.remove("pausa");
-  p.style.transform = "translateX(50%)";
-  p2.innerText = 0;
+  pauseTimer()
+  restart.classList.add("invisible")
+  xy = 0
+  p.classList.remove("moverEsquerda")
+  p.transform = "translateX(50%)"
+  p2.innerText = 0
 }
 
 function tocarMusica(xy) {
@@ -153,6 +151,6 @@ function tocarMusica(xy) {
     tocarNota(teclas[numConsEstr[xy]]);
     p2.innerText = numConsEstr[xy];
   } else {
-    setTimeout(restartTimer, 10000);
+    setTimeout(restartTimer, 18000);
   }
 }
